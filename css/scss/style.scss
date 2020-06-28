@@ -15,6 +15,10 @@ body{
     background-color: #f8f8f8;
 }
 
+.bg-base{
+    background-color: $green-base;
+}
+
 /* Start - Override Metro CSS */
 .app-bar{
     min-height: 70px;
@@ -93,4 +97,3 @@ body{
         }
     }
 }
-/* Media Queryes */

@@ -2,6 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="metro4:init" content="false">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="img/ico.png" type="image/x-icon">
     <link rel="stylesheet" href="vendor/metro/css/metro-all.min.css"/>
@@ -17,9 +18,8 @@
                     <img src="img/ico.png" class="logo" />
                     <span class="title h3">Monitor COVID</span>
                 </a>
-                <a class="app-bar-item float-right no-hover" v-on:click="">
-                    <b class="mif-calendar mif-2x mr-2"></b>
-                    <span class="title">{{data}}</span>
+                <a class="app-bar-item float-right c-pointer" onclick="Metro.dialog.open('#about');">
+                    <b class="mif-help mif-2x"> Sobre</b>
                 </a>
             </div>
         </header>
@@ -39,7 +39,8 @@
                     </div>
                 </div>
                 <!-- Application proposal - End -->
-                <!-- Application Metrics - Start -->
+
+                <!-- Application metrics - Start -->
                 <div class="row">
                     <div class="cell-6 pt-0 pr-0">
                         <info-aggregate 
@@ -78,25 +79,49 @@
                         </div>
                     </div>
                 </div>
-                <!-- Application proposal - Start -->
+                <!-- Application metrics - Start -->
             </div>
         </section>
-        <section class="row" id="app-footer">
-
+        <section class="row bg-dark fg-light p-8" id="app-footer">
+            <div class="cell-12 cell-lg-4 text-center">
+                
+            </div>
+            <div class="cell-12 cell-lg-4 text-center">
+                Monitor Covid desenvolvido por Hebert Silva
+            </div>
+            <div class="cell-12 cell-lg-4 text-center">
+                <b class="mif-calendar mif-2x mr-2"></b> {{data}}
+            </div>
         </section>
+
+        <!-- Application modal Start-->
+        <div class="dialog border-radius-2" data-role="dialog" id="about">
+            <div class="dialog-content">
+                Aplicação construída com a utilização de APIs open source.<br>
+                Os dados globais foram retirados do end point <a href="https://covid19api.com/">https://covid19api.com/</a>.<br>
+                Os dados regionais foram extraídos do end point 
+                <a href="https://covid19-brazil-api-docs.now.sh/">https://covid19-brazil-api-docs.now.sh/</a>.
+            </div>
+            <div class="dialog-actions">
+                <button class="button js-dialog-close bg-base bg-grayMouse-hover fg-light">OK</button>
+            </div>
+        </div>
+        <!-- Application modal End-->
+
     </div>
     <!-- Application Container - End -->
+
 <!-- By standart the script for vue is loaded before closing body. 
     First the content is loaded in DOM and after vue is activated -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="scripts/components/info-aggregate.js"></script>
+    <script src="vendor/metro/js/metro.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
     <script src="scripts/app.js"></script>
-    <script src="vendor/metro/js/metro.min.js"></script>
     <script>
         $(document).ready(function(){
             $('.count').mask('0.000.000.000', {reverse: true});

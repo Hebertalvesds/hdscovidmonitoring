@@ -25,6 +25,7 @@ const app = new Vue({
         global_ranking: Array(),
         top_10: Array(),
         data: '',
+        about: false
     },
     methods:{
         get_brazilian_metrics,
@@ -106,7 +107,7 @@ const app = new Vue({
         get_world_metrics.call(this);
         get_global_ranking.call(this);
         this.display_date_formated();
-
+        Metro.init();
         setInterval(function(){
             get_brazilian_metrics.call(this);
             get_world_metrics.call(this);
