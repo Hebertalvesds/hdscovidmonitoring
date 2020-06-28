@@ -1,0 +1,80 @@
+/* External components*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Slab:wght@400&display=swap");
+body {
+  background-color: #f8f8f8;
+}
+
+/* Start - Override Metro CSS */
+.app-bar {
+  min-height: 70px;
+}
+.app-bar .brand .logo {
+  width: 60px;
+  height: 60px;
+}
+.app-bar .brand .title {
+  padding-left: 8px;
+  color: #248B77;
+  font-family: "Roboto";
+  font-weight: 700;
+}
+
+#app-container {
+  margin-top: 70px;
+}
+#app-container .card.info {
+  border-radius: 8px 8px 8px 2px;
+  background-color: #DEF2F9;
+  color: #333333;
+  font-family: "Roboto Slab";
+}
+#app-container .card.info span[class*=mif-] {
+  bottom: 8px;
+  right: 8px;
+  color: #248B77;
+}
+#app-container .aggregate > .title {
+  font-family: "Roboto Condensed";
+  font-weight: 700;
+  color: #248B77;
+  margin-bottom: 8px;
+}
+#app-container .aggregate > .title .icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+#app-container .aggregate .info .title, #app-container .aggregate .info .count {
+  display: block;
+  font-family: "Roboto Condensed";
+}
+#app-container .aggregate .info .title {
+  font-weight: 700;
+}
+#app-container .aggregate .info .count {
+  font-size: 1.5rem;
+  color: #333333;
+  font-weight: bold;
+}
+#app-container .aggregate .info:nth-child(2) .title {
+  color: #248B77;
+}
+#app-container .aggregate .info:nth-child(3) .title {
+  color: #920000;
+}
+#app-container .aggregate .info:nth-child(4) .title {
+  color: #009320;
+}
+#app-container .aggregate .table thead {
+  font-size: 1rem;
+  font-family: "Roboto Condensed";
+  font-weight: bold;
+}
+#app-container .aggregate .table tbody {
+  font-size: 0.875rem;
+  font-family: "Roboto Slab";
+}
+
+/* Media Queryes */
+
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+/* External components*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&family=Roboto+Slab:wght@400&display=swap');
+
+$green-base: #248B77;
+$blue-light: #DEF2F9;
+$dark: #333333;
+$red: #920000;
+$green: #009320;
+
+$font-roboto-normal: 'Roboto';
+$font-roboto-slab: 'Roboto Slab';
+$font-roboto-cn: 'Roboto Condensed';
+
+body{
+    background-color: #f8f8f8;
+}
+
+/* Start - Override Metro CSS */
+.app-bar{
+    min-height: 70px;
+    .brand{
+        .logo{
+            width: 60px;
+            height: 60px;
+        }
+        .title{
+            padding-left: 8px;
+            color: $green-base;
+            font-family: $font-roboto-normal;
+            font-weight: 700;
+        }
+    }
+}
+#app-container{
+    margin-top: 70px;
+    .card.info{
+        border-radius: 8px 8px 8px 2px;
+        background-color: $blue-light;
+        color: $dark;
+        font-family: $font-roboto-slab;
+
+        span[class*="mif-"]{
+            bottom: 8px;
+            right: 8px;
+            color: $green-base;
+        }
+    }
+    .aggregate{ 
+        > .title{
+            font-family: $font-roboto-cn;
+            font-weight: 700;
+            color: $green-base;
+            margin-bottom: 8px;
+
+            .icon{
+                width: 24px;
+                height: 24px;
+                margin-right: 8px;
+            }
+        }
+        
+        .info{
+            .title, .count{
+                display: block;
+                font-family: $font-roboto-cn;
+            }
+            .title{
+                font-weight: 700;
+            }
+            .count{
+                font-size: 1.5rem;
+                color: $dark;
+                font-weight: bold;
+            }
+        }
+        .info:nth-child(2) .title{
+            color: $green-base;
+        }
+        .info:nth-child(3) .title{
+            color: $red;
+        }
+        .info:nth-child(4) .title{
+            color: $green;
+        }
+        .table thead{
+            font-size: 1rem;
+            font-family: $font-roboto-cn;
+            font-weight: bold;
+        }
+        .table tbody{
+            font-size: .875rem;
+            font-family: $font-roboto-slab;
+        }
+    }
+}
+/* Media Queryes */
