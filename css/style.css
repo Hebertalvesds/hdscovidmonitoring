@@ -60,15 +60,6 @@ body {
   color: #333333;
   font-weight: bold;
 }
-#app-container .aggregate .info:nth-child(2) .title {
-  color: #248B77;
-}
-#app-container .aggregate .info:nth-child(3) .title {
-  color: #920000;
-}
-#app-container .aggregate .info:nth-child(4) .title {
-  color: #009320;
-}
 #app-container .aggregate .table thead {
   font-size: 1rem;
   font-family: "Roboto Condensed";

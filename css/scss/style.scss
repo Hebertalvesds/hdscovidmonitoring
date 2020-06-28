@@ -77,15 +77,6 @@ body{
                 font-weight: bold;
             }
         }
-        .info:nth-child(2) .title{
-            color: $green-base;
-        }
-        .info:nth-child(3) .title{
-            color: $red;
-        }
-        .info:nth-child(4) .title{
-            color: $green;
-        }
         .table thead{
             font-size: 1rem;
             font-family: $font-roboto-cn;
